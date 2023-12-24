@@ -19,6 +19,6 @@ Route::group(['middleware' => 'is_admin'], function () {
         Route::get('/', [CategoryController::class, 'index'])->name('category.index');
         Route::get('/', [CategoryController::class, 'index'])->name('category.index');
         Route::post('/store', [CategoryController::class, 'store'])->name('category.store');
-        Route::post('/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
+        Route::get('/destroy/{id}', [CategoryController::class, 'destroy'])->name('category.destroy');
     });
 });

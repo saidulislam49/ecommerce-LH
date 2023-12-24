@@ -99,11 +99,11 @@
         $(document).on("click", "#delete", function(e) {
             e.preventDefault();
             var link = $(this).attr("href");
-            swal({
+           new swal({
                     title: "Are you Want to delete?",
                     text: "Once Delete, This will be Permanently Delete!",
                     icon: "warning",
-                    buttons: true,
+                    buttons: ["Cancel", "Yes!"],
                     dangerMode: true,
                 })
                 .then((willDelete) => {

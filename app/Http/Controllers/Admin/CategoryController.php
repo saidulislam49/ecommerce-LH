@@ -46,5 +46,8 @@ class CategoryController extends Controller
     // category delete
     public function destroy($id)
     {
+        DB::table('categories')->where('id', $id)->delete();
+        $notification = array('message' => 'Category Deleted!!', 'alert-type' => 'success');
+        return back()->with($notification);
     }
 }
